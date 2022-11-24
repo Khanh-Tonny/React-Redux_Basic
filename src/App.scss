@@ -7,3 +7,96 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+@media (min-width: 1400px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1450px !important;
+  }
+}
+
+
+.app-container {
+  .header-container {
+    margin-top: 15px;
+
+    .navbar {
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0) !important;
+
+      .btn-login {
+        margin-right: 16px;
+        padding: 0 16px;
+        border-radius: 5px;
+        border: 1px solid #535353;
+        height: 40px;
+      }
+
+      .btn-logup {
+        padding: 0 16px;
+        border-radius: 5px;
+        background-color: #303030;
+        color: rgb(255, 255, 255);
+        height: 40px;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+
+
+      .nav-link {
+        &.active {
+          color: aqua;
+          border-radius: 20%;
+          background-color: rgb(150, 142, 128);
+        }
+      }
+    }
+  }
+
+  .homepage-container {
+    .homepage-conten {
+      padding: 100px;
+      width: 50%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .title_1 {
+        font-size: 35px;
+        font-weight: 600;
+      }
+
+      .title_2 {
+        font-size: 22px;
+      }
+
+      .title_3 {
+        border-radius: 5px;
+        padding: 0 16px;
+        border-radius: 5px;
+        background-color: #303030;
+        color: rgb(255, 255, 255);
+        height: 40px;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+
+    }
+  }
+}
+
+video {
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+}
