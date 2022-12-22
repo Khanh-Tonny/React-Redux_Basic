@@ -11,9 +11,10 @@ import {
 
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
 import sidebarBg from '../../assets/bg2.jpg';
-import { DiReact} from 'react-icons/di';
+import { DiReact } from 'react-icons/di';
 import { MdDashboard } from 'react-icons/md';
 import './SideBar.scss'
+import { Link } from "react-router-dom";
 
 const SideBar = (props) => {
     const { image, collapsed, toggled, handleToggleSidebar } = props;
@@ -38,26 +39,30 @@ const SideBar = (props) => {
                             textOverflow: 'ellipsis',
                             whiteSpace: 'nowrap',
                         }}
-                    >   
-                    <DiReact size={'3em'} color={"00bfff"} />
-                        Hoi Dan IT
+                    >
+                        <DiReact size={'3em'} color={"00bfff"} />
+                        Khanh Vu
                     </div>
                 </SidebarHeader>
 
                 <SidebarContent>
                     <Menu iconShape="circle">
                         <MenuItem
-                            icon={ <MdDashboard/> }
+                            icon={<MdDashboard />}
                         >
                             dashboard
+                            <Link to="/admins" />
                         </MenuItem>
                     </Menu>
                     <Menu iconShape="circle">
                         <SubMenu
-                            icon = {<FaGem/>}
-                            title = "Features"
+                            icon={<FaGem />}
+                            title="Features"
                         >
-                            <MenuItem> Quản lý User </MenuItem>
+                            <MenuItem >
+                                Quản lý User
+                                <Link to="manage-users" />
+                            </MenuItem>
                             <MenuItem> Quản lý bài Quiz </MenuItem>
                             <MenuItem> Quản lý câu hỏi</MenuItem>
                         </SubMenu>
